@@ -1,0 +1,4 @@
+# trial
+C = hcat(rand(1:45,1000,1),rand(1:110,1000,1))
+a = C[1,:]
+size(a)

@@ -1,0 +1,5 @@
+function intersectML(ms::Array...)
+  t = map(x->Dict(x[2][i,:]=>(x[1],i) for i=1:size(x[2],1)),enumerate(ms))
+  u = intersect(map(keys,t)...)
+  return (u,map(x->[x[r][2] for r in u],t)...)
+end
